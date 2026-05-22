@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-page-clr: hsl(185, 75%, 39%);
+    --navy-clr: hsl(229, 23%, 23%);
+    --gray-clr: hsl(227, 10%, 46%);
+    --line-clr: hsl(225, 10%, 92%);
+
+    --fs-main: 1.125rem;
+
+    --ff: "Kumbh Sans", sans-serif;
+
+    --fw-medium:400;
+    --fw-bold:700;
+}
+
+body{
+    background-color: var(--bg-page-clr);
+    margin: 0;
+    font-family: var(--ff);
+    background-image: url(images/bg-pattern-top.svg), 
+    url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 52vw bottom 36vh,
+    left 48vw top 50vh;
+}
+
+.page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: min(100% - 2rem, 22rem);
+    box-shadow: 0 48px 64px 0 hsla(229, 23%, 23%, 0.4);
+}
+
+.bg-card{
+    background-image: url(images/bg-pattern-card.svg);
+    background-size: cover;
+    position: absolute;
+    height: 35%;
+    width: 100%;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4.5rem;
+    border: 4px solid white;
+}
+
+.content{
+    padding: 11rem 0 1.5rem;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.location{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.title, .stats > li > strong{
+    font-size: var(--fs-main);
+    font-weight: var(--fw-bold);
+    color: var(--navy-clr);
+}
+
+.age, .location, .stats > li > span{
+    color: var(--gray-clr);
+    font-weight: var(--fw-medium);
+}
+
+.stats{
+    border-top: 2px solid var(--line-clr);
+    display: flex;
+    padding: 24px 0 0 0;
+    margin: 24px 0 0 0;
+    justify-content: center;
+    gap: 52px;
+}
+
+.stats li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+}
+
+.stats > li > span{
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+}
+
+
+
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
