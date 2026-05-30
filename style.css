@@ -30,6 +30,7 @@ body{
 .page{
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -81,6 +82,18 @@ body{
     gap: 8px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .location{
     margin: 0;
     font-size: 0.9rem;
@@ -100,10 +113,9 @@ body{
 .stats{
     border-top: 2px solid var(--line-clr);
     display: flex;
-    padding: 24px 0 0 0;
+    padding: 24px 40px 0;
     margin: 24px 0 0 0;
-    justify-content: center;
-    gap: 52px;
+    justify-content: space-between;
 }
 
 .stats li{
